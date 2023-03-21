@@ -18,4 +18,10 @@ Generally, frame objects contain:
 
 - the arguments passed to the function
 
-- the set of local variables created during the function call
+- the set of local variables created during the function call (see: `local_variables.rb`)
+
+Every running program has a call stack and multithreaded programs have one call stack for each thread.
+
+Stack overflow happens when call stack has too many frame objects taking up memory. (see: `shortest.rb`)
+
+Use a base case to prevent stack overflow. Base case: a situation where the function stops calling itself. All recursive functions require at least one base case. (see: `shortest_with_base_case.rb`)
