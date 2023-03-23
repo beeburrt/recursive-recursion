@@ -17,3 +17,5 @@ For calculating factorials, the iterative approach is best.
 Fibonacci examples: the Fibonacci sequence begins with 1 and 1 (sometimes 0 and 1), the next number is the sum of previous two numbers, so the sequence looks like: 1, 1, 2, 3, 5, 8, 13
 
 each number is the sum of the previous two numbers.
+
+the recursive Fibonacci algorithm is terrible
