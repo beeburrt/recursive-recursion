@@ -2,7 +2,7 @@
 
 A _recursive_ thing is something whose definition includes itself
 
-**self-referential**
+It's **self-referential**
 
 A recursive function is a function that calls itself
 
@@ -24,4 +24,10 @@ Every running program has a call stack and multithreaded programs have one call 
 
 Stack overflow happens when call stack has too many frame objects taking up memory. (see: `shortest.rb`)
 
-Use a base case to prevent stack overflow. Base case: a situation where the function stops calling itself. All recursive functions require at least one base case. (see: `shortest_with_base_case.rb`)
+Use a base case to prevent stack overflow.
+
+Base case: a situation where the function stops calling itself. All recursive functions require at least one base case. (see: `shortest_with_base_case.rb`)
+
+Reaching the base case doesn't necessarily mean reaching the end of the recursive algorithm. It only means the base case won't continue to make recursive calls. (see: `count_down_and_up.rb`)
+
+Everytime a function is called, a new frame is created and pushed onto the call stack and each call stack has it's own version of each local variable.
