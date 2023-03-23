@@ -1,0 +1,17 @@
+<script type="text/javascript">
+  function countDownAndUp(number) {
+    document.write(number + "<br />");
+    if (number === 0) {
+      // BASE CASE
+      document.write("Reached the base case.<br />");
+      return;
+    } else {
+      // RECURSIVE CASE
+      countDownAndUp(number - 1);
+      document.write(number + " returning<br />");
+      return;
+    }
+  }
+
+  countDownAndUp(3);
+</script>
