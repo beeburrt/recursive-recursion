@@ -1,7 +1,7 @@
 def fibonacci(nthNumber)
   a, b = 1, 1
   puts "a = #{a}, b = #{b}"
-  for i in (1...nthNumber)
+  # for i in (1...nthNumber)
     a, b = b, a + b
     puts "a = #{a}, b = #{b}"
   end
