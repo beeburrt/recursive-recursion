@@ -45,3 +45,11 @@ WTF? I'm not ok.
 supposing an `exponentByRecusion()` function: if `exponentByRecursion(3, 6)` is called, it's the same as `exponentByRecusion(3, 3) * exponentByRecursion(3, 3)`.
 
 And as for the base cases, any number to the zeroth power is 1, and any number to the first power is itself. So, for any function call `exponentByRecursion(a, n)`, if n is 0, then we return 1 (because a<sup>0</sup> is always 1) and if n is 1, we return the number itself (because a<sup>1</sup> is always a).
+
+No programming problem _requires_ recursion.
+
+3 features of a programming problem, when present, make it suitable to a recursive approach:
+
+- It involves a tree-like structure
+- It involves backtracking
+- It isn't so deeply recursive as to potentially cause a stack overflow
