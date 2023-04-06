@@ -27,3 +27,19 @@ The remaining string after the first character.
 The argument shrinks by one for each recursive function call until it becomes either a single-element or an empty string.
 
 ## detecting palindromes
+
+A palindrome is a word or phrase that is the same when written forward and backward.
+
+level; race car; taco cat; a man, a plan, a canal... Panama
+
+**What is the base case?**
+
+A zero-character or one-character string, which retruns true because it is always a palindrome.
+
+**What argument is passed to the recursive function?**
+
+The middle characters of the string.
+
+**How does this argument become closer to the base case?**
+
+The string shrinks by two characters for each recusive call until it bacomes a zero-character string or a one-character string.
