@@ -14,17 +14,11 @@ head-tail technique for implementing recursive functions: splitting the function
 
 ## reversing a string
 
-**What is the base case?**
+- **What is the base case?** A reversing a string function, in the case of a blank string (""), and a one-character string ("A"), are already the reverse of themselves. This would be the base case.
 
-A reversing a string function, in the case of a blank string (""), and a one-character string ("A"), are already the reverse of themselves. This would be the base case.
+- **What argument is passed to the recursive function call?** The remaining string after the first character.
 
-**What argument is passed to the recursive function call?**
-
-The remaining string after the first character.
-
-**How does this become come closer to the base case?**
-
-The argument shrinks by one for each recursive function call until it becomes either a single-element or an empty string.
+- **How does this become come closer to the base case?** The argument shrinks by one for each recursive function call until it becomes either a single-element or an empty string.
 
 ## detecting palindromes
 
@@ -32,14 +26,8 @@ A palindrome is a word or phrase that is the same when written forward and backw
 
 level; race car; taco cat; a man, a plan, a canal... Panama
 
-**What is the base case?**
+- **What is the base case?** A zero-character or one-character string, which retruns true because it is always a palindrome.
 
-A zero-character or one-character string, which retruns true because it is always a palindrome.
+- **What argument is passed to the recursive function?** The middle characters of the string.
 
-**What argument is passed to the recursive function?**
-
-The middle characters of the string.
-
-**How does this argument become closer to the base case?**
-
-The string shrinks by two characters for each recusive call until it bacomes a zero-character string or a one-character string.
+- **How does this argument become closer to the base case?** The string shrinks by two characters for each recusive call until it bacomes a zero-character string or a one-character string.
