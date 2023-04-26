@@ -1,4 +1,4 @@
-My notes from Al Sweigart's book: The Recursive Book of Recursion
+Code and notes from Al Sweigart's excellent book: The Recursive Book of Recursion
 
 The code in the book is written in JavaScript and Python
 
