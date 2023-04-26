@@ -30,7 +30,7 @@ the recursive Fibonacci algorithm is terrible, it repeats the same calculations 
 
 Any recursive algorithm can be performed iteratively by using a loop and a stack. (see: factorial_emulate_recursion.rb)
 
-the findSubstring programs (find_substring.rb, findSubstring.py, & findSubstring.html) demonstrate that it is always possible to turn any loop into an equivalent recursive function. Although, the author advises against it.
+the findSubstring programs (`find_substring.rb`, `findSubstring.py`, & `findSubstring.html`) demonstrate that it is always possible to turn any loop into an equivalent recursive function. Although, the author advises against it.
 
 ## exponent examples:
 
