@@ -4,7 +4,7 @@ The code in the book is written in JavaScript and Python
 
 My notes and code are in Ruby 👀
 
-Why do this? I like Ruby, plus I thought it would make for some good learnin!
+Why did I rewrite all this code in Ruby? I like Ruby, plus I thought trying to translate these programs into Ruby would make for some good learnin!
 
 https://nostarch.com/recursive-book-recursion
 
