@@ -31,3 +31,20 @@ level; race car; taco cat; a man, a plan, a canal... Panama
 - **What argument is passed to the recursive function?** The middle characters of the string.
 
 - **How does this argument become closer to the base case?** The string shrinks by two characters for each recusive call until it bacomes a zero-character string or a one-character string.
+
+## Tower of Hanoi
+
+Move a stack of disks from one of three towers to another tower following these rules:
+
+- player can move only one disk at a time
+- player can move disks only to and from the top
+- player can never place a larger disk on a smaller one
+
+- **What is the base case?**
+  Solving a tower of one disk.
+
+- **What argument is passed to the recursive call?**
+  Solving a tower of size one less than the current size.
+
+- **How does this argument get closer to base case?**
+  The size of the tower to solve decreases by one disk for each recursive call until it is a one-disk tower.
