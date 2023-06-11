@@ -1,6 +1,6 @@
 <script type="text/javascript">
   // Set up towers A, B, and C (end of array is top of tower)
-  let TOTAL_DISKS = 6;
+  const TOTAL_DISKS = 6;
   let TOWERS = { A: [], B: [], C: [] };
 
   // Populate tower A
@@ -8,5 +8,75 @@
     TOWERS["A"].push(i);
   }
 
-  document.write();
+  function printDisk(diskNum) {
+    // Print a single disk of width diskNum
+    let emptySpace = " ".repeat(TOTAL_DISKS - diskNum);
+    if (diskNum === 0) {
+      // Just draw the pole
+      document.write(emptySpace + "||" + emptySpace);
+    } else {
+      // Draw the disk
+      let diskSpace = "@".repeat(diskNum);
+      let diskNumLabel = String("___" + diskNum).slice(-2);
+      document.write(
+        emptySpace + diskSpace + diskNumLabel + diskSpace + emptySpace
+      );
+    }
+  }
+
+  function printTowers() {
+    // Print all three towers
+    let towerLetters = "ABC";
+    for (let level = TOTAL_DISKS; level >= 0; level--) {
+      for (let towerLetterIndex = 0; towerLetterIndex < 3; towerLetterIndex++) {
+        let tower = TOWERS[towerLetters[towerLetterIndex]];
+        if (level >= tower.length) {
+          printDisk(0);
+        } else {
+          printDisk(tower[level]);
+        }
+      }
+      document.write("<br />");
+    }
+    // Print the tower labels A, B, and C
+    let emptySpace = " ".repeat(TOTAL_DISKS);
+    document.write(
+      emptySpace +
+        " A" +
+        emptySpace +
+        emptySpace +
+        " B" +
+        emptySpace +
+        emptySpace +
+        " C<br /><br />"
+    );
+  }
+
+  function moveOneDisk(startTower, endTower) {
+    // Move the top disk from startTower to endTower
+    let disk = TOWERS[startTower].pop();
+    TOWERS[endTower].push(disk);
+  }
+
+  function solve(numberOfDisks, startTower, endTower, tempTower) {
+    // Move the top numberOfDisks disks from startTower to endTower
+    if (numberOfDisks === 1) {
+      // BASE CASE
+      moveOneDisk(startTower, endTower);
+      printTowers();
+      return;
+    } else {
+      // RECURSIVE CASE
+      solve(numberOfDisks, -1, startTower, tempTower, endTower);
+      moveOneDisk(startTower, endTower);
+      printTowers();
+      solve(numberOfDisks, -1, tempTower, endTower, startTower);
+      return;
+    }
+  }
+
+  document.write("<pre>");
+  printTowers();
+  solve(TOTAL_DISKS, "A", "B", "C");
+  document.write("</pre>");
 </script>
