@@ -43,8 +43,14 @@ Move a stack of disks from one of three towers to another tower following these 
 - **What is the base case?**
   Solving a tower of one disk.
 
-- **What argument is passed to the recursive call?**
-  Solving a tower of size one less than the current size.
+- **What argument is passed to the recursive call?** Solving a tower of size one less than the current size.
 
-- **How does this argument get closer to base case?**
-  The size of the tower to solve decreases by one disk for each recursive call until it is a one-disk tower.
+- **How does this argument get closer to base case?** The size of the tower to solve decreases by one disk for each recursive call until it is a one-disk tower.
+
+## Ackermann function
+
+- **What is the base case?** When `m` is 0.
+
+- **What arguments are passed to the recursive call?** Either `m` or `m - 1` is passed for the next `m` parameter. And `1`, `n - 1`, or the return value of `ackermann(m, n - 1)` is passed for the next `n` parameter.
+
+- **How do these arguments become closer to the base case?** The `m` argument is always either decreasing or staying the same size, so it will eventually reach 0.
